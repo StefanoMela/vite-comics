@@ -4,7 +4,9 @@ export default {
     data () {
         return {
 
-            icons: '',
+            footerIcons: [{
+                
+            },]
         }
     }
 }
@@ -13,10 +15,11 @@ export default {
 
 <template>
     <div class="container-fluid">
-        <i>icona</i>
-        <i>icona</i>
-        <i>icona</i>
-        <i>icona</i>
+        <i>Digital Comics</i>
+        <i>DC Merchandise</i>
+        <i>Subscription</i>
+        <i>Comic Shop Locator</i>
+        <i>DC Power Visa</i>
     </div>
 </template>
 

@@ -17,13 +17,10 @@ export default {
 <style lang="scss" scoped>
 .container {
   margin: 0 auto;
-  margin-top: 56px;
 
   width: 100%;
   height: 500px;
   background-color: rgba(32, 32, 181, 0.868);
-
-  border: 1px solid red;
 
   display: flex;
   justify-content: center;

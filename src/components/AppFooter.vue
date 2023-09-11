@@ -152,99 +152,111 @@ export default {
   <div class="footer-container">
     <div class="footer__divider">
       <div class="fc_link_group">
-          <ul class="fc_first_link_group">
-            <li class="list-title" style="color:white; font-weight: bold;">DC COMICS</li>
-            <li 
-            v-for="(link, index) in footerLinks"
-            :key="index"
-            >
-            {{link.text}}</li>
-          </ul>
-          <ul class="fc_second_link_group">
-            <li class="list-title" style="color:white; font-weight: bold;">DC COMICS</li>
-            <li 
-            v-for="(link, index) in shopLinks"
-            :key="index"
-            >
-            {{ link.text}}</li>
-          </ul>
-          <ul class="fc_third_link_group">
-            <li class="list-title" style="color:white; font-weight: bold;">DC COMICS</li>
-            <li 
-            v-for="(link, index) in dcLinks"
-            :key="index"
-            >
-            {{ link.text }}</li>
-          </ul>
+        <ul class="fc_first_link_group">
+          <li class="list-title" style="color: white; font-weight: bold">
+            DC COMICS
+          </li>
+          <li v-for="(link, index) in footerLinks" :key="index">
+            {{ link.text }}
+          </li>
+        </ul>
+        <ul class="fc_second_link_group">
+          <li class="list-title" style="color: white; font-weight: bold">
+            SHOP
+          </li>
+          <li v-for="(link, index) in shopLinks" :key="index">
+            {{ link.text }}
+          </li>
+        </ul>
+        <ul class="fc_third_link_group">
+          <li class="list-title" style="color: white; font-weight: bold">DC</li>
+          <li v-for="(link, index) in dcLinks" :key="index">
+            {{ link.text }}
+          </li>
+        </ul>
+        <ul class="fc_fourth_link_group">
+          <li class="list-title" style="color: white; font-weight: bold">
+            SITES
+          </li>
+          <li v-for="(link, index) in sitesLinks" :key="index">
+            {{ link.text }}
+          </li>
+        </ul>
       </div>
       <div class="fc_img_overlay_container">
-        <img src="../assets/img/dc-logo-bg.png" alt="">
+        <img src="../assets/img/dc-logo-bg.png" alt="" />
       </div>
     </div>
     <div class="bottom-footer">
-        <div class="fc_btn_container">
-            <button>Sign Up Now</button>
-        </div>
-        <div class="fc_social_icons_container">
-            <span>FOLLOW US</span>
-            <i>iconeSocial</i>
-            <i>iconeSocial</i>
-            <i>iconeSocial</i>
-            <i>iconeSocial</i>
-            <i>iconeSocial</i>
-        </div>
+      <div class="fc_btn_container">
+        <button class="call__to__action__button">Sign Up Now</button>
+      </div>
+      <div class="fc_social_icons_container">
+        <span class="hl-text">FOLLOW US</span>
+        <img src="../assets/img/footer-facebook.png" alt="" />
+        <img src="../assets/img/footer-twitter.png" alt="" />
+        <img src="../assets/img/footer-youtube.png" alt="" />
+        <img src="../assets/img/footer-pinterest.png" alt="" />
+        <img src="../assets/img/footer-periscope.png" alt="" />
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.footer-container{
+.footer-container {
+  width: 100%;
+  background-image: url(../assets/img/footer-bg.jpg);
+  padding-top: 2rem;
+  position: relative;
 
+  .fc_link_group {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding-left: 2rem;
+
+    color: #72787c;
+  }
+
+  .fc_img_overlay_container {
+    overflow: hidden;
+    img {
+      max-width: 450px;
+      position: absolute;
+      top: -85px;
+      right: 85px;
+    }
+  }
+
+  .bottom-footer {
     width: 100%;
-    max-height: 400px;
-    background-color: rgba(34, 32, 32, 0.915);
+    background-color: #303030;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem;
 
-    .footer__divider{
-
+    .fc_social_icons_container {
       display: flex;
-      justify-content: space-between;
-      background-image: url(../assets/img/footer-bg.jpg);
+      align-items: center;
+    }
+    .fc_social_icons_container > * {
+      padding-inline: .7rem;
     }
 
-    .fc_link_group{
-
-        width: 40%;
-
-        padding-left: 30px;
-
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-
+    .call__to__action__button {
+      color: white;
+      background-color: transparent;
+      text-transform: uppercase;
+      padding: 1rem;
+      border: 1px solid #0082f9;
     }
 
-    .fc_img_overlay_container{
-
-        width: 60%;
-        img{
-            max-height: 400px;
-        }
+    .hl-text {
+      color: #0082f9;
+      font-size: larger;
     }
-
-    .bottom-footer{
-
-        width: 100%;
-        height: 120px;
-
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        .fc_social_icons_container>*{
-
-            padding-inline: 1rem;
-        }
-
-    }
+  }
 }
 </style>

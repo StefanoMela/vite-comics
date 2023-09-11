@@ -97,6 +97,9 @@ export default {
 
 <template>
   <main>
+
+    <div class="jumbotron"></div>
+
     <div class="container">
       <AppCard
         v-for="(comic, index) in comicsList"
@@ -110,17 +113,28 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
+
+.jumbotron {
+
+  background-image: url(../assets/img/jumbotron.jpg);
+  width: 100%;
+  height: 45vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .container {
   margin: 0 auto;
   width: 100%;
-  height: 500px;
-  background-color: rgba(32, 32, 181, 0.868);
+  background-color: #1C1C1C;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: .5rem;
   padding: 3rem;
   overflow: auto;
+
+  cursor: pointer;
 }
 </style>

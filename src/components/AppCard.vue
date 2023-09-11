@@ -13,14 +13,19 @@ export default {
     <div class="card__img">
       <img :src="thumb" alt="" />
     </div>
-    <h5>{{ series }}</h5>
+    <h4>{{ series }}</h4>
     <p>{{ price }}</p>
   </div>
 </template>
 
 <style lang="scss" scoped>
+
+.card {
+  width: calc((100% / 6) - .5rem);
+  color: white;
+}
 .card__img > img{
-    width: 300px;
+    width: 200px;
     aspect-ratio: 1;
 }
 </style>

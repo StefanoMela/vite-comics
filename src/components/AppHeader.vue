@@ -2,7 +2,7 @@
 export default {
   data() {
     return {
-      Headerlinks: [
+      headerlinks: [
         {
           text: "CHARACTERS",
           href: "#",
@@ -25,7 +25,7 @@ export default {
         },
         {
           text: "GAMES",
-          href: "#",
+          href: "www.google.com",
           current: false,
         },
         {
@@ -60,81 +60,51 @@ export default {
 </script>
 
 <template>
-  <header class="header">
+  <div class="header">
     <div class="header__content">
-      <div class="header__logo__container">
-        <a class="header__logo" href="#">
-          <img src="../assets/img/dc-logo-bg.png" alt="" />
-        </a>
+      <div class="header__logo">
+        <img src="../assets/img/dc-logo.png" alt="" />
       </div>
-      <div class="header__link__container">
-        <ul v-for="link in Headerlinks" class="header__menu">
-          <li>
-            <a>{{ link.text }}</a>
-          </li>
+      <div class="header__links">
+        <ul>
+          <li v-for="(link, index) in headerlinks"><a :href="href">{{ link.text }}</a></li>
         </ul>
       </div>
-      <div class="header__quick">
-        <div class="icon-hamburger">
-          <span></span>
-          <span></span>
-        </div>
-      </div>
     </div>
-  </header>
+  </div>
 </template>
 
-<style>
-/* Menu */
-
-.header__logo > img {
-  max-width: 100px;
-}
-
-:root {
-  --menu-bg: #1d1d1f;
-}
+<style lang="scss">
 
 .header {
-  background-color: var(--menu-bg);
+
   width: 100%;
-  padding-top: 30px;
+  padding: .8rem;
 }
 
 .header__content {
-  width: 100%;
-  margin: 0 auto;
+
   display: flex;
   justify-content: space-evenly;
-  background-color: white;
-  padding: 10px;
-}
-
-.header__logo,
-.header__quick {
-  display: flex;
   align-items: center;
-  color: var(--menu-color);
+
+}
+.header__logo img {
+  max-width: 60px;
 }
 
-.header__menu {
-  display: inline-block;
+.header__links {
+  li {
+  
+    display: inline-block;
+    padding-inline: .5rem;
+  } 
+  
+  li>a:hover {
+
+  color: blue;
+  padding-bottom: 8px;
+  border-bottom: 5px solid blue;
 }
-
-.header__menu li a {
-  color: var(--menu-color);
-  opacity: 0.8;
-  display: block;
-  padding: 16px;
-  font-size: 15px;
-}
-
-.header__menu li a:hover {
-
-color: rgb(33, 33, 213);
-border-bottom: 2px solid blue;
-padding-bottom: 50px;
-
-
 }
 </style>

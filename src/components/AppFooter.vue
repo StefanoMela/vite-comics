@@ -154,15 +154,27 @@ export default {
       <div class="fc_link_group">
           <ul class="fc_first_link_group">
             <li class="list-title" style="color:white; font-weight: bold;">DC COMICS</li>
-            <li v-for="link in footerLinks">{{link.text}}</li>
+            <li 
+            v-for="(link, index) in footerLinks"
+            :key="index"
+            >
+            {{link.text}}</li>
           </ul>
           <ul class="fc_second_link_group">
             <li class="list-title" style="color:white; font-weight: bold;">DC COMICS</li>
-            <li v-for="link in shopLinks">{{ link.text}}</li>
+            <li 
+            v-for="(link, index) in shopLinks"
+            :key="index"
+            >
+            {{ link.text}}</li>
           </ul>
           <ul class="fc_third_link_group">
             <li class="list-title" style="color:white; font-weight: bold;">DC COMICS</li>
-            <li v-for="link in dcLinks">{{ link.text }}</li>
+            <li 
+            v-for="(link, index) in dcLinks"
+            :key="index"
+            >
+            {{ link.text }}</li>
           </ul>
       </div>
       <div class="fc_img_overlay_container">
